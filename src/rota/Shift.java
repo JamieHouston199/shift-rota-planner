@@ -6,6 +6,7 @@ public class Shift {
 	private String end;
 	private double hours;
 	private boolean weekend;
+	private Employee assignedTo;
 	
 	public Shift(String day,String start,String end, double hours,boolean weekend) {
 		this.day=day;
@@ -13,6 +14,12 @@ public class Shift {
 		this.end=end;
 		this.hours=hours;
 		this.weekend=weekend;
+	}
+	public void setAssignedTo(Employee employee) {
+		this.assignedTo=employee;
+	}
+	public Employee getAssignedTo() {
+		return this.assignedTo;
 	}
 	
 	public String getDay() {
