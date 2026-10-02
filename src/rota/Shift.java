@@ -31,9 +31,18 @@ public class Shift {
 	public boolean isWeekend() {
 		return weekend;
 	}
+	/**
+	 * A toString method to display the shift and who is working it in the console
+	 */
 	@Override
 	public String toString() {
-		return day +" "+start+"-"+end+" ("+ hours + "h)";
+	String worker;
+	if(this.assignedTo==null) {
+		worker = "UNFILLED";
+	}else {
+		worker = this.assignedTo.getName();
+	}
+	return this.day + " | " +this.start + "-"+this.end+" | "+this.hours+"h | "+ worker;
 	}
 
 }
